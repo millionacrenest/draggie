@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="draggie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mu-1l-AmP">
+                                <rect key="frame" x="29" y="530" width="317" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SxQ-LG-sEd"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbT-uw-ZXD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi! I'm Draggie!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="500-mQ-Apb" customClass="ExpandedLabel" customModule="draggie" customModuleProvider="target">
+                                <rect key="frame" x="79" y="27" width="217" height="38"/>
+                                <fontDescription key="fontDescription" name="SignPainter-HouseScript" family="SignPainter" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw4-X1-jfU">
+                                <rect key="frame" x="29" y="576" width="317" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mem-yc-oP2"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3vM-l8-3cX" kind="show" id="ZTU-r6-BlB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Music: http://www.purple-planet.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyd-HG-3dx">
+                                <rect key="frame" x="29" y="626" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change your Draggie's name!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHH-mQ-V0X">
+                                <rect key="frame" x="29" y="318" width="317" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NRK-qe-0nn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R9m-XH-h6f"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBI-oj-jJJ">
+                                <rect key="frame" x="29" y="484" width="317" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wAS-bl-GXh"/>
+                                </constraints>
+                                <state key="normal" title="Play Recording">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zo3-c1-YXR">
+                                <rect key="frame" x="29" y="438" width="317" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TiK-DA-H4I"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="lvT-7O-kt6"/>
+                                </constraints>
+                                <state key="normal" title="Stop Recording">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6J-9o-VNZ">
+                                <rect key="frame" x="29" y="389" width="317" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="594-yT-mj0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="tod-Jn-zs4"/>
+                                </constraints>
+                                <state key="normal" title="Record a Draggie Roar!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragon7.png" translatesAutoresizingMaskIntoConstraints="NO" id="yzG-1J-yBb">
+                                <rect key="frame" x="67" y="60" width="240" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="257" id="D77-Bf-Sti"/>
+                                    <constraint firstAttribute="width" constant="240" id="uJ8-Pk-JjL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Mu-1l-AmP" firstAttribute="top" secondItem="wBI-oj-jJJ" secondAttribute="bottom" constant="16" id="4Ry-oP-3rw"/>
+                            <constraint firstItem="zo3-c1-YXR" firstAttribute="top" secondItem="r6J-9o-VNZ" secondAttribute="bottom" constant="19" id="6cb-zh-KnX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r6J-9o-VNZ" secondAttribute="trailing" constant="13" id="8MB-Rh-AY0"/>
+                            <constraint firstItem="7Mu-1l-AmP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="9OG-bt-4ZK"/>
+                            <constraint firstItem="r6J-9o-VNZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="AfF-Xy-YCv"/>
+                            <constraint firstItem="yzG-1J-yBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="B6R-KW-ULW"/>
+                            <constraint firstItem="500-mQ-Apb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="BBv-LV-sSd"/>
+                            <constraint firstItem="Hw4-X1-jfU" firstAttribute="top" secondItem="7Mu-1l-AmP" secondAttribute="bottom" constant="16" id="BZe-NK-00c"/>
+                            <constraint firstItem="wBI-oj-jJJ" firstAttribute="top" secondItem="zo3-c1-YXR" secondAttribute="bottom" constant="16" id="NhI-3J-nMQ"/>
+                            <constraint firstItem="Hw4-X1-jfU" firstAttribute="top" secondItem="7Mu-1l-AmP" secondAttribute="bottom" constant="16" id="SIR-wL-21x"/>
+                            <constraint firstItem="Hw4-X1-jfU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="Vz0-uf-4qh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hw4-X1-jfU" secondAttribute="trailing" constant="13" id="Yzh-In-Fk5"/>
+                            <constraint firstItem="wBI-oj-jJJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="d2q-M6-B73"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Mu-1l-AmP" secondAttribute="trailing" constant="13" id="dw2-EZ-618"/>
+                            <constraint firstItem="zo3-c1-YXR" firstAttribute="top" secondItem="r6J-9o-VNZ" secondAttribute="bottom" constant="19" id="eJ4-ii-6x4"/>
+                            <constraint firstItem="7Mu-1l-AmP" firstAttribute="top" secondItem="wBI-oj-jJJ" secondAttribute="bottom" constant="16" id="f7Q-k0-wKz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="500-mQ-Apb" secondAttribute="trailing" constant="63" id="fS1-b5-lqQ"/>
+                            <constraint firstItem="yzG-1J-yBb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="j0N-tL-RAj"/>
+                            <constraint firstItem="zo3-c1-YXR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="jBY-kA-rYz"/>
+                            <constraint firstItem="r6J-9o-VNZ" firstAttribute="top" secondItem="mHH-mQ-V0X" secondAttribute="bottom" constant="41" id="jdf-uQ-kqn"/>
+                            <constraint firstItem="mHH-mQ-V0X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="jlJ-VA-Er4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wBI-oj-jJJ" secondAttribute="trailing" constant="13" id="mde-59-zzN"/>
+                            <constraint firstItem="iyd-HG-3dx" firstAttribute="top" secondItem="Hw4-X1-jfU" secondAttribute="bottom" constant="20" id="o3b-LM-ajB"/>
+                            <constraint firstItem="mHH-mQ-V0X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oI6-mi-k26"/>
+                            <constraint firstItem="mHH-mQ-V0X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pPI-xk-Xjx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zo3-c1-YXR" secondAttribute="trailing" constant="13" id="pYp-GE-4HM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mHH-mQ-V0X" secondAttribute="trailing" constant="13" id="rra-hy-IBj"/>
+                            <constraint firstItem="500-mQ-Apb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="w3v-Bh-3vW"/>
+                            <constraint firstItem="wBI-oj-jJJ" firstAttribute="top" secondItem="zo3-c1-YXR" secondAttribute="bottom" constant="16" id="wxX-SB-aF9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yzG-1J-yBb" secondAttribute="trailing" constant="52" id="zXG-LK-9ff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="draggieTitleLabel" destination="500-mQ-Apb" id="Qhh-5m-iON"/>
+                        <outlet property="nameDraggieTextField" destination="mHH-mQ-V0X" id="hAA-4o-Ut7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Dragon2 View Controller-->
+        <scene sceneID="JtK-q1-tbt">
+            <objects>
+                <viewController id="3vM-l8-3cX" customClass="Dragon2ViewController" customModule="draggie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vdT-lH-fmX"/>
+                        <viewControllerLayoutGuide type="bottom" id="kS7-6I-2fx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ApU-J2-hz8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.png" translatesAutoresizingMaskIntoConstraints="NO" id="i51-pO-bFv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dragon7.png" translatesAutoresizingMaskIntoConstraints="NO" id="hea-0C-Mug">
+                                <rect key="frame" x="67" y="61" width="240" height="236"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8y8-zs-GKN" appends="YES" id="gGp-ua-wNA"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draggie!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuj-vA-Rg8" customClass="ExpandedLabel" customModule="draggie" customModuleProvider="target">
+                                <rect key="frame" x="16" y="585" width="343" height="62"/>
+                                <fontDescription key="fontDescription" name="SignPainter-HouseScript" family="SignPainter" pointSize="68"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Uuj-vA-Rg8" firstAttribute="leading" secondItem="ApU-J2-hz8" secondAttribute="leadingMargin" id="2Dw-CI-gYi"/>
+                            <constraint firstItem="Uuj-vA-Rg8" firstAttribute="top" secondItem="hea-0C-Mug" secondAttribute="bottom" constant="288" id="8gj-Rp-tN2"/>
+                            <constraint firstItem="i51-pO-bFv" firstAttribute="leading" secondItem="ApU-J2-hz8" secondAttribute="leading" id="PPa-Qu-CqY"/>
+                            <constraint firstItem="kS7-6I-2fx" firstAttribute="top" secondItem="Uuj-vA-Rg8" secondAttribute="bottom" constant="20" id="RTo-5h-04F"/>
+                            <constraint firstItem="i51-pO-bFv" firstAttribute="top" secondItem="ApU-J2-hz8" secondAttribute="top" id="hY0-zw-Xs8"/>
+                            <constraint firstAttribute="trailing" secondItem="i51-pO-bFv" secondAttribute="trailing" id="hw9-89-uSW"/>
+                            <constraint firstItem="i51-pO-bFv" firstAttribute="centerY" secondItem="ApU-J2-hz8" secondAttribute="centerY" id="i3D-Oa-wsB"/>
+                            <constraint firstItem="kS7-6I-2fx" firstAttribute="top" secondItem="i51-pO-bFv" secondAttribute="bottom" id="lHA-hx-wvE"/>
+                            <constraint firstItem="Uuj-vA-Rg8" firstAttribute="trailing" secondItem="ApU-J2-hz8" secondAttribute="trailingMargin" id="lbo-Ge-mNd"/>
+                            <constraint firstItem="i51-pO-bFv" firstAttribute="centerX" secondItem="ApU-J2-hz8" secondAttribute="centerX" id="mqa-aV-pKk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="i51-pO-bFv" id="Zl3-kG-sBK"/>
+                        <outlet property="draggieImage" destination="hea-0C-Mug" id="fyQ-V4-R1L"/>
+                        <outlet property="draggieNameLabel" destination="Uuj-vA-Rg8" id="9fC-Tu-x0g"/>
+                        <outlet property="dragon2View" destination="ApU-J2-hz8" id="aLe-ym-Efm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50d-9n-2Sm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8y8-zs-GKN">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="3vM-l8-3cX" id="UyX-Ut-ioc"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="828" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="castle.png" width="1732" height="1171"/>
+        <image name="dragon7.png" width="487" height="470"/>
+    </resources>
+</document>
